@@ -90,15 +90,12 @@ if [ "$BUILD_PX4" != "false" ]; then
         unzip \
         xsltproc \
         zip \
-        jinja2 \
-        numpy \
-        toml \
         ;
-
+        
     # Python3 dependencies
     echo
     echo "Installing PX4 Python3 dependencies"
-    pip3 install --user -r ${DIR}/px4_requirements.txt
+    pip3 install --user -r $CATKIN_SRC/px4_fast_planner/install/px4_requirements.txt
 
     echo "arrow" | sudo -S DEBIAN_FRONTEND=noninteractive apt-get -y --quiet --no-install-recommends install \
             gstreamer1.0-plugins-bad \
