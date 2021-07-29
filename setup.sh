@@ -90,6 +90,9 @@ if [ "$BUILD_PX4" != "false" ]; then
         unzip \
         xsltproc \
         zip \
+        jinja2 \
+        numpy \
+        toml \
         ;
 
     # Python3 dependencies
@@ -110,6 +113,7 @@ if [ "$BUILD_PX4" != "false" ]; then
             libxml2-utils \
             pkg-config \
             protobuf-compiler \
+            libfreeimage-dev \
             ;
 
 

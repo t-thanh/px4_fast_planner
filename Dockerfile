@@ -16,8 +16,8 @@ RUN chown ${uid}:${gid} -R /home/docker
 
 USER docker
 WORKDIR /home/docker
-RUN /bin/bash -c 'sudo apt-get update && sudo apt-get install -y git && \
+RUN /bin/bash -c 'sudo apt-get update && sudo apt-get install -y git && source /opt/ros/melodic/setup.bash && \
 	cd ~/ && git clone https://github.com/t-thanh/px4_fast_planner && cd px4_fast_planner && ./setup.sh'
-RUN echo "source ~/px4_fast_planner/catkin_ws/devel/setup.bash" > ~/.bashrc
+RUN echo "source ~/px4_fast_planner/setup-px4.sh" > ~/.bashrc
 # Launch terminator
 CMD ["terminator"]
