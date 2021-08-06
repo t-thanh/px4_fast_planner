@@ -23,7 +23,7 @@ RUN /bin/bash -c 'source /opt/ros/melodic/setup.bash && \
 	source /home/docker/catkin_ws/devel/setup.bash && \
 	echo "source /home/docker/catkin_ws/devel/setup.bash" >> /home/docker/setup-px4.sh && \
 	sudo apt --quiet -y install ca-certificates gnupg lsb-core wget && \
-	cd /home/docker/catkin_ws/src && git clone https://github.com/mzahana/px4_fast_planner && \
+	cd /home/docker/catkin_ws/src && git clone https://github.com/t-thanh/px4_fast_planner && \
 	git clone https://github.com/Jaeyoung-Lim/mavros_controllers.git && \
 	git clone https://github.com/catkin/catkin_simple && \
 	git clone https://github.com/ethz-asl/eigen_catkin && \
